@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#000000">
-  <title>Huzaifa Ai</title>
+  <title>AI Chatbot</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     * {
@@ -39,7 +39,7 @@
       display: flex;
       flex-direction: column;
       background: white;
-      border-radius:px;
+      border-radius: px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -60,6 +60,8 @@
       overflow-y: auto;
       display: flex;
       flex-direction: column;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
     }
     .message {
       max-width: 80%;
@@ -269,8 +271,8 @@
       if (sender === "ai") {
         messageDiv.style.alignItems = "flex-start";
         let avatar = document.createElement("img");
-        // Updated avatar image URL remains unchanged
-        avatar.src = "https://i.postimg.cc/T3rjjcnt/HUZAIFA-20250131-092856-0000.png";
+        // Updated avatar image URL
+        avatar.src = "https://i.postimg.cc/qv1ktPz0/1000131022.jpg";
         messageDiv.appendChild(avatar);
         let textContainer = document.createElement("div");
         textContainer.style.display = "flex";
@@ -357,6 +359,7 @@
       let loadingMessageDiv = document.createElement("div");
       loadingMessageDiv.classList.add("message", "ai-message");
       let avatar = document.createElement("img");
+      // Updated avatar image URL
       avatar.src = "https://i.postimg.cc/qv1ktPz0/1000131022.jpg";
       loadingMessageDiv.appendChild(avatar);
       let span = document.createElement("span");
